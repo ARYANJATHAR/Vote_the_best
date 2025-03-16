@@ -96,17 +96,17 @@ const LandingPage = () => {
       </motion.nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4">
+      <section className="pt-24 md:pt-32 pb-16 md:pb-20 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <motion.div
             variants={staggerChildren}
             initial="initial"
             animate="animate"
-            className="space-y-8"
+            className="space-y-6 md:space-y-8"
           >
             {/* Main Headings */}
             <motion.h1 
-              className="text-5xl md:text-6xl font-bold text-gray-900 mb-4"
+              className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-4"
               variants={fadeInUp}
             >
               <motion.span 
@@ -131,7 +131,7 @@ const LandingPage = () => {
 
             {/* Subtitle */}
             <motion.p 
-              className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-12"
+              className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8 md:mb-12 px-4"
               variants={fadeInUp}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -144,7 +144,7 @@ const LandingPage = () => {
 
             {/* CTA Buttons */}
             <motion.div 
-              className="flex flex-col sm:flex-row items-center justify-center gap-4"
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4"
               variants={staggerChildren}
               initial="initial"
               animate="animate"
@@ -154,7 +154,7 @@ const LandingPage = () => {
                 whileTap={{ scale: 0.95 }}
                 variants={fadeInUp}
                 onClick={() => router.push('/women/battle')}
-                className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-lg w-full sm:w-auto hover:shadow-lg"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium text-base sm:text-lg hover:shadow-lg"
               >
                 Start Voting Now
               </motion.button>
@@ -163,7 +163,7 @@ const LandingPage = () => {
                 whileTap={{ scale: 0.95 }}
                 variants={fadeInUp}
                 onClick={() => router.push('/women/leaderboard')}
-                className="px-8 py-3 bg-white text-blue-600 border-2 border-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-medium text-lg flex items-center justify-center gap-2 w-full sm:w-auto group"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-white text-blue-600 border-2 border-blue-600 rounded-lg hover:bg-blue-50 transition-colors font-medium text-base sm:text-lg flex items-center justify-center gap-2"
               >
                 View Leaderboard
                 <motion.span 
@@ -179,7 +179,7 @@ const LandingPage = () => {
                 whileTap={{ scale: 0.95 }}
                 variants={fadeInUp}
                 onClick={() => router.push('/men/register')}
-                className="px-8 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-medium text-lg w-full sm:w-auto hover:shadow-lg"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors font-medium text-base sm:text-lg hover:shadow-lg"
               >
                 Register Profile
               </motion.button>
@@ -189,7 +189,7 @@ const LandingPage = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 px-4 bg-gray-50">
+      <section className="py-16 md:py-20 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
@@ -198,7 +198,7 @@ const LandingPage = () => {
             transition={{ duration: 0.6 }}
           >
             <motion.h2 
-              className="text-3xl font-bold text-center text-gray-900 mb-16"
+              className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-12 md:mb-16"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -207,52 +207,52 @@ const LandingPage = () => {
               How It Works
             </motion.h2>
 
-            <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-4xl mx-auto">
               {/* Choose Your Favorite */}
               <motion.div 
-                className="text-center"
+                className="text-center px-4"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
               >
                 <motion.div 
-                  className="w-20 h-20 mx-auto mb-6 bg-pink-100 rounded-full flex items-center justify-center"
+                  className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 bg-pink-100 rounded-full flex items-center justify-center"
                   whileHover={{ scale: 1.1 }}
                   animate={{ rotate: [0, -10, 10, -10, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 2 }}
                 >
-                  <span className="text-4xl">❤️</span>
+                  <span className="text-3xl sm:text-4xl">❤️</span>
                 </motion.div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">
                   Choose Your Favorite
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-sm sm:text-base text-gray-600">
                   Compare profiles side by side and vote for the ones that stand out to you.
                 </p>
               </motion.div>
 
               {/* Track Rankings */}
               <motion.div 
-                className="text-center"
+                className="text-center px-4"
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
               >
                 <motion.div 
-                  className="w-20 h-20 mx-auto mb-6 bg-blue-100 rounded-full flex items-center justify-center"
+                  className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 sm:mb-6 bg-blue-100 rounded-full flex items-center justify-center"
                   whileHover={{ scale: 1.1 }}
                   animate={{ rotate: [0, -10, 10, -10, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 2.5 }}
                 >
-                  <span className="text-4xl">🏆</span>
+                  <span className="text-3xl sm:text-4xl">🏆</span>
                 </motion.div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">
                   Track Rankings
                 </h3>
-                <p className="text-gray-600">
-                  Watch as profiles rise through the ranks based on community votes.
+                <p className="text-sm sm:text-base text-gray-600">
+                  Follow the leaderboard to see who's trending and making their mark.
                 </p>
               </motion.div>
             </div>

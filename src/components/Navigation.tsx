@@ -50,14 +50,7 @@ export default function Navigation() {
                 Battle
               </Link>
             )}
-            <Link
-              href="/leaderboard"
-              className="flex items-center space-x-2 text-gray-800 hover:text-gray-600 transition-colors"
-            >
-              <span className="text-sm font-semibold">
-                <span className="inline-block align-middle">👤</span> Leaderboard
-              </span>
-            </Link>
+            
             <Link
               href="/login"
               className="text-gray-600 hover:text-gray-800 transition-colors"
